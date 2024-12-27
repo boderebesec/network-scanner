@@ -1,0 +1,77 @@
+# Usage Examples
+
+## Basic Scan
+Run a basic scan on the target host to check for open ports in the specified range.
+```bash
+python main.py example.com -p 1-100
+
+# Advanced Scan with OS Detection
+Run an advanced scan on the target host to check for open ports and detect the operating system based on TTL and TCP fingerprinting.
+
+python main.py example.com -p 1-1000 --os-detect
+
+# Stealth SYN Scan with SSL Analysis
+Run a stealth SYN scan on the target host to check for open ports and analyze the SSL/TLS configuration.
+
+python main.py example.com -p 1-443 -s SYN --ssl-analyze
+
+# Custom Payload Injection
+Inject a custom payload to a specific port on the target host.
+from src.advanced.payload_injector import PayloadInjector
+
+injector = PayloadInjector("example.com", 80)
+payload = "GET / HTTP/1.1\r\nHost: example.com\r\n\r\n"
+response = injector.inject_payload(payload)
+print(response)
+
+# Service Detection
+Detect services running on common ports on the target host.
+
+from src.scanners.service_detector import ServiceDetector
+
+detector = ServiceDetector("example.com")
+common_ports = [80, 443, 22, 21, 25]
+services = detector.detect_services(common_ports)
+for port, service in services.items():
+    print(f"Port {port}: {service}")
+
+# Vulnerability Scanning
+Scan the target host for common vulnerabilities.
+
+from src.scanners.vulnerability_scanner import VulnerabilityScanner
+
+scanner = VulnerabilityScanner("example.com")
+vulnerabilities = scanner.scan()
+for vulnerability in vulnerabilities:
+    print(vulnerability)
+
+# Stealth Scanning
+Perform a stealth SYN scan on common ports on the target host.
+
+from src.advanced.stealth_scanner import StealthScanner
+
+scanner = StealthScanner("example.com")
+common_ports = [80, 443, 22, 21, 25]
+results = scanner.scan_ports(common_ports)
+for port, status in results.items():
+    print(f"Port {port}: {status}")
+
+
+### Explanation
+- **Basic Scan:** Provides an example of running a basic scan to check for open ports.
+- **Advanced Scan with OS Detection:** Provides an example of running an advanced scan with OS detection.
+- **Stealth SYN Scan with SSL Analysis:** Provides an example of running a stealth SYN scan with SSL analysis.
+- **Custom Payload Injection:** Provides an example of injecting a custom payload to a specific port.
+- **Service Detection:** Provides an example of detecting services running on common ports.
+- **Vulnerability Scanning:** Provides an example of scanning for common vulnerabilities.
+- **Stealth Scanning:** Provides an example of performing a stealth SYN scan on common ports.
+
+This enhanced `Examples.txt` file provides clear and detailed usage examples for various features of your network scanner tool.
+### Explanation
+- **Basic Scan:** Provides an example of running a basic scan to check for open ports.
+- **Advanced Scan with OS Detection:** Provides an example of running an advanced scan with OS detection.
+- **Stealth SYN Scan with SSL Analysis:** Provides an example of running a stealth SYN scan with SSL analysis.
+- **Custom Payload Injection:** Provides an example of injecting a custom payload to a specific port.
+- **Service Detection:** Provides an example of detecting services running on common ports.
+- **Vulnerability Scanning:** Provides an example of scanning for common vulnerabilities.
+- **Stealth Scanning:** Provides an example of performing a stealth SYN scan on common ports.

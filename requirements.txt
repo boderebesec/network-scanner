@@ -1,0 +1,20 @@
+scapy>=2.4.5
+cryptography>=3.4.7
+python-nmap>=0.7.1
+requests>=2.26.0
+argparse>=1.4.0
+
+# Install the requirements:
+- python -m pip install scapy
+- python -m pip install cryptography
+- python -m pip install python-nmap
+- python -m pip install requests
+- python -m pip install argparse
+
+# Alternatively, you can install all the required packages listed in requirements.txt by running:
+- python -m pip install -r requirements.txt
+
+# Install Npcap (Windows only):
+
+- Download and install Npcap from Npcap download page.
+- Make sure to check the box that says "Install Npcap in WinPcap API-compatible Mode".
