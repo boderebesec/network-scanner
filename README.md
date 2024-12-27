@@ -4,17 +4,28 @@ A comprehensive network scanning and security assessment tool built in Python. T
 
 ## Features
 
-- Basic Scanning:
+## Basic Scanning:
+
 • TCP/UDP port scanning
+
 • Service version detection
+
 • Basic vulnerability checks
+
 • Network host discovery
-- Advanced Features:
+
+## Advanced Features:
+
 • OS fingerprinting
+
 • Stealth scanning (SYN, FIN, XMAS)
+
 • Custom payload injection
+
 • Banner grabbing
+
 • Network topology mapping
+
 • SSL/TLS analysis
 
 ## Installation
@@ -88,4 +99,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Author
 
 Junior Boderebe
+
 • GitHub: @boderebesec
